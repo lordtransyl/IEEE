@@ -1,22 +1,22 @@
 import React from 'react';
 import Navbar from '../components/Navbar';
 import Mainpage from '../components/Mainpage';
-import about from '../components/about';
-import callforpaper from '../components/callforpaper';
-import abstract from '../components/abstract';
-import schedule from '../components/schedule';
-import team from '../components/team';
+import About from '../components/about';
+import Callforpaper from '../components/callforpaper';
+import Abstract from '../components/abstract';
+import Schedule from '../components/schedule';
+import Team from '../components/team';
 
 const Home = () => {
   return (
     <>
       <Navbar />
       <Mainpage />
-      <about />
-      <callforpaper />
-      <abstract />
-      <schedule/>
-      <team/>
+      <About />
+      <Callforpaper />
+      <Abstract />
+      <Schedule />
+      <Team />
     </>
   );
 };

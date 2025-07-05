@@ -1,5 +1,5 @@
 import React from 'react';
-
+import venueImage from '../assets/11.jpg';
 const Mainpage = () => {
   return (
     <section className="bg-blue-50 p-10">
@@ -23,7 +23,11 @@ const Mainpage = () => {
           </button>
         </div>
         <div>
-          <img src="https://via.placeholder.com/400x250" alt="Venue" className="rounded shadow" />
+          <img
+  src={venueImage}
+  alt="Venue"
+  className="rounded shadow mb-4"
+/>
         </div>
       </div>
     </section>

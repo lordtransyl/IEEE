@@ -30,7 +30,7 @@ const Team = () => {
               alt="Another Person"
               className="mx-auto rounded-full mb-4"
             />
-            <h3 className="text-xl font-bold text-blue-800">Another Person</h3>
+            <h3 className="text-xl font-bold text-blue-800">vere arenkilum undel athu</h3>
             <p className="text-gray-600">Role</p>
           </div>
         </div>

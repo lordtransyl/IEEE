@@ -6,7 +6,7 @@ const About = () => {
       <div className="max-w-4xl mx-auto">
         <h2 className="text-3xl font-bold text-blue-800 mb-4">About ICATI 2026</h2>
         <p className="text-gray-700">
-          AS8 College of Engineering hosted the conference.
+          A S8 College of Engineering hosted the conference.
           Submissions are invited on advanced control engineering, instrumentation,
           and innovative technological solutions.
         </p>

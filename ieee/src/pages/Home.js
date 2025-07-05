@@ -2,10 +2,11 @@ import React from 'react';
 import Navbar from '../components/Navbar';
 import Mainpage from '../components/Mainpage';
 import About from '../components/about';
-import Callforpaper from '../components/callforpaper';
+import ImportantDate from '../components/ImportantDate';
 import Abstract from '../components/abstract';
-import Schedule from '../components/schedule';
+import Areas from '../components/areas';
 import Team from '../components/team';
+import Footer from '../components/Footer';
 
 const Home = () => {
   return (
@@ -13,10 +14,12 @@ const Home = () => {
       <Navbar />
       <Mainpage />
       <About />
-      <Callforpaper />
-      <Abstract />
-      <Schedule />
+      <Areas />
+      <ImportantDate />
       <Team />
+      <Abstract />
+      <Footer />
+      
     </>
   );
 };

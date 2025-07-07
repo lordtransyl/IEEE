@@ -7,6 +7,7 @@ const AbstractForm = () => {
   const [title, setTitle] = useState('');
   const [pdfFile, setPdfFile] = useState(null);
   const [message, setMessage] = useState('');
+  const [uploadProgress, setUploadProgress] = useState(0);
 
   const handleFileChange = (e) => {
     setPdfFile(e.target.files[0]);
@@ -20,33 +21,45 @@ const AbstractForm = () => {
       return;
     }
 
-    try {
-      const formData = new FormData();
-      formData.append('name', name);
-      formData.append('email', email);
-      formData.append('title', title);
-      formData.append('pdfFile', pdfFile);
+    const formData = new FormData();
+    formData.append('name', name);
+    formData.append('email', email);
+    formData.append('title', title);
+    formData.append('pdfFile', pdfFile);
 
-      const res = await fetch('https://ieee-backend-b7wg.onrender.com/upload', {
-        method: 'POST',
-        body: formData,
-      });
+    const xhr = new XMLHttpRequest();
+    xhr.open('POST', 'https://ieee-backend-b7wg.onrender.com/upload', true);
 
-      const data = await res.json();
-
-      if (data.success) {
-        setMessage('Abstract submitted successfully!');
-        setName('');
-        setEmail('');
-        setTitle('');
-        setPdfFile(null);
-      } else {
-        setMessage('Submission failed.');
+    xhr.upload.onprogress = (event) => {
+      if (event.lengthComputable) {
+        const percentComplete = Math.round((event.loaded / event.total) * 100);
+        setUploadProgress(percentComplete);
       }
-    } catch (error) {
-      console.error(error);
-      setMessage('Something went wrong.');
-    }
+    };
+
+    xhr.onload = () => {
+      if (xhr.status === 200) {
+        const data = JSON.parse(xhr.responseText);
+        if (data.success) {
+          setMessage('Abstract submitted successfully!');
+          setName('');
+          setEmail('');
+          setTitle('');
+          setPdfFile(null);
+          setUploadProgress(0);
+        } else {
+          setMessage('Submission failed.');
+        }
+      } else {
+        setMessage('Something went wrong.');
+      }
+    };
+
+    xhr.onerror = () => {
+      setMessage('Upload failed due to a network error.');
+    };
+
+    xhr.send(formData);
   };
 
   return (
@@ -127,7 +140,25 @@ const AbstractForm = () => {
             />
           </div>
 
-          {/* Submit */}
+          {/* Progress Bar */}
+          {uploadProgress > 0 && (
+            <div className="w-full mt-4">
+              <div className="w-full bg-gray-200 rounded-full overflow-hidden h-6">
+                <div
+                  className={`h-full flex items-center justify-center text-xs font-bold text-white transition-all duration-300 ${
+                    uploadProgress === 100
+                      ? 'bg-green-500'
+                      : 'bg-gradient-to-r from-blue-600 to-blue-800'
+                  }`}
+                  style={{ width: `${uploadProgress}%` }}
+                >
+                  {uploadProgress}%
+                </div>
+              </div>
+            </div>
+          )}
+
+          {/* Submit Button */}
           <button
             type="submit"
             className="w-full bg-gradient-to-r from-blue-600 to-blue-800 hover:from-blue-700 hover:to-blue-900 text-white py-3 rounded-lg font-semibold shadow-lg transition-all duration-300"

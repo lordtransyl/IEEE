@@ -1,8 +1,8 @@
 import React from 'react';
 
-const Callforpaper = () => {
+const ImportantDate = () => {
   return (
-    <section className="p-10 bg-blue-50">
+    <section className="p-10 bg-white-50">
   <div className="max-w-4xl mx-auto">
     <h2 className="text-3xl font-bold text-blue-800 mb-4">Important Dates</h2>
     <ul className="list-disc pl-6 text-gray-700 space-y-2">
@@ -20,4 +20,4 @@ const Callforpaper = () => {
   );
 };
 
-export default Callforpaper;
+export default ImportantDate;

@@ -27,13 +27,8 @@ const Navbar = () => {
         </a>
       </li>
       <li>
-        <a href="#schedule" className="hover:text-blue-600 transition-colors duration-200">
-          Schedule
-        </a>
-      </li>
-      <li>
-        <a href="#register" className="hover:text-blue-600 transition-colors duration-200">
-          Register
+        <a href="#areas" className="hover:text-blue-600 transition-colors duration-200">
+          Areas
         </a>
       </li>
     </ul>

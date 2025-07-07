@@ -2,7 +2,7 @@ import React from 'react';
 
 const Abstract = () => {
   return (
-    <section className="p-10 bg-white">
+    <section className="p-10 bg-blue-50">
       <div className="max-w-xl mx-auto">
         <h2 className="text-3xl font-bold text-blue-800 mb-6">Submit Your Abstract</h2>
         <form className="grid gap-4">

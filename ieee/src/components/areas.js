@@ -1,110 +1,136 @@
 import React from 'react';
+import {
+  FaMicrochip,
+  FaBolt,
+  FaRobot,
+  FaLaptopCode,
+  FaHeartbeat,
+  FaNetworkWired,
+  FaCogs,
+} from 'react-icons/fa';
 
 const Areas = () => {
+  const areas = [
+    {
+      title: 'Electronics and Communication Engineering',
+      icon: <FaMicrochip className="text-blue-600 text-3xl" />,
+      items: [
+        'VLSI Design',
+        'Communication Systems',
+        'Signal Processing',
+        'Microwave and RF Engineering',
+        'Internet of Things (IoT)',
+      ],
+    },
+    {
+      title: 'Electrical and Electronics Engineering',
+      icon: <FaBolt className="text-yellow-500 text-3xl" />,
+      items: [
+        'Power Systems',
+        'Renewable Energy',
+        'Electric Machines',
+        'Power Electronics',
+        'Smart Grids',
+      ],
+    },
+    {
+      title: 'Instrumentation and Control Engineering',
+      icon: <FaRobot className="text-purple-600 text-3xl" />,
+      items: [
+        'Process Control',
+        'Industrial Automation',
+        'Measurement and Instrumentation',
+        'Robotics and Mechatronics',
+        'Control Systems',
+      ],
+    },
+    {
+      title: 'Computer Science Engineering',
+      icon: <FaLaptopCode className="text-green-600 text-3xl" />,
+      items: [
+        'Artificial Intelligence',
+        'Machine Learning',
+        'Data Science',
+        'Cybersecurity',
+        'Networking and Distributed Systems',
+      ],
+    },
+    {
+      title: 'Biomedical Engineering Areas',
+      icon: <FaHeartbeat className="text-pink-600 text-3xl" />,
+      items: [
+        'Medical Imaging (MRI, CT, Ultrasound, image processing)',
+        'Biomechanics (Orthopaedic, Cardiovascular, Tissue engineering)',
+        'Biomedical Instrumentation (ECG, EEG, EMG, biosensors)',
+        'Tissue Engineering (Biomaterials, stem cells, regeneration)',
+        'Neural Engineering (Brain-computer interfaces, neuroprosthetics)',
+        'Biosignal analysis and interpretation',
+        'Clinical Engineering (Device management, clinical trials)',
+        'Rehabilitation (Assistive tech, prosthetics, robotics)',
+      ],
+    },
+    {
+      title: 'Interdisciplinary Areas',
+      icon: <FaNetworkWired className="text-indigo-600 text-3xl" />,
+      items: [
+        'Embedded Systems (Electronics, CS, Instrumentation)',
+        'IoT (Integrating communication, electronics, CS)',
+        'Robotics & Automation (Electrical, Electronics, CS)',
+      ],
+    },
+    {
+      title: 'Other Areas',
+      icon: <FaCogs className="text-gray-600 text-3xl" />,
+      items: [
+        'Soft Computing (Fuzzy logic, neural networks, genetic algorithms)',
+        'Communication Networks (Wireless, security, protocols)',
+        'Digital Signal Processing (Image/audio processing, DSP algorithms)',
+      ],
+    },
+  ];
+
   return (
-    <section className="p-10 bg-blue-50">
-  <div className="max-w-7xl mx-auto">
-    <h2 className="text-3xl font-bold text-blue-800 mb-6">Conference Areas</h2>
+    <section
+      id="areas"
+      className="scroll-mt-24 py-16 px-6 bg-gradient-to-b from-white to-blue-50"
+    >
+      <div className="max-w-7xl mx-auto">
+        <h2 className="text-4xl font-extrabold text-blue-800 mb-8 text-center">
+          Conference Areas
+        </h2>
 
-    <p className="text-gray-700 mb-8 text-lg">
-      The theme of the conference is <strong>“International Conference on Advanced Technologies and Innovations” IEEE - ICATI 2026 (IEEE Nexo-Tech 2026)</strong>.
-      It is a platform for technical exchange amongst researchers from academia, research laboratories, and industries in various emerging fields including
-      Signal Processing, Communication, Computer Science, Energy Systems, Instrumentation & Control Systems, Robotics, Smart Cities and more.
-    </p>
+        <p className="text-gray-700 mb-12 text-lg text-center max-w-3xl mx-auto">
+          The theme of the conference is{' '}
+          <strong>
+            “International Conference on Advanced Technologies and Innovations”
+            IEEE - ICATI 2026 (IEEE Nexo-Tech 2026)
+          </strong>
+          . It serves as a platform for researchers, industry, and academia in
+          diverse fields such as Signal Processing, Communication, Computer
+          Science, Energy Systems, Instrumentation, Robotics, Smart Cities, and
+          more.
+        </p>
 
-    <div className="grid md:grid-cols-2 gap-8">
-
-      {/* Electronics and Communication */}
-      <div className="bg-white rounded-lg shadow p-6">
-        <h3 className="text-xl font-semibold text-blue-700 mb-4">Electronics and Communication Engineering</h3>
-        <ul className="list-disc list-inside text-gray-700 space-y-1">
-          <li>VLSI Design</li>
-          <li>Communication Systems</li>
-          <li>Signal Processing</li>
-          <li>Microwave and RF Engineering</li>
-          <li>Internet of Things (IoT)</li>
-        </ul>
-      </div>
-
-      {/* Electrical and Electronics */}
-      <div className="bg-white rounded-lg shadow p-6">
-        <h3 className="text-xl font-semibold text-blue-700 mb-4">Electrical and Electronics Engineering</h3>
-        <ul className="list-disc list-inside text-gray-700 space-y-1">
-          <li>Power Systems</li>
-          <li>Renewable Energy</li>
-          <li>Electric Machines</li>
-          <li>Power Electronics</li>
-          <li>Smart Grids</li>
-        </ul>
-      </div>
-
-      {/* Instrumentation and Control */}
-      <div className="bg-white rounded-lg shadow p-6">
-        <h3 className="text-xl font-semibold text-blue-700 mb-4">Instrumentation and Control Engineering</h3>
-        <ul className="list-disc list-inside text-gray-700 space-y-1">
-          <li>Process Control</li>
-          <li>Industrial Automation</li>
-          <li>Measurement and Instrumentation</li>
-          <li>Robotics and Mechatronics</li>
-          <li>Control Systems</li>
-        </ul>
-      </div>
-
-      {/* Computer Science */}
-      <div className="bg-white rounded-lg shadow p-6">
-        <h3 className="text-xl font-semibold text-blue-700 mb-4">Computer Science Engineering</h3>
-        <ul className="list-disc list-inside text-gray-700 space-y-1">
-          <li>Artificial Intelligence</li>
-          <li>Machine Learning</li>
-          <li>Data Science</li>
-          <li>Cybersecurity</li>
-          <li>Networking and Distributed Systems</li>
-        </ul>
-      </div>
-
-      {/* Biomedical Engineering */}
-      <div className="bg-white rounded-lg shadow p-6 md:col-span-2">
-        <h3 className="text-xl font-semibold text-blue-700 mb-4">Biomedical Engineering Areas</h3>
-        <div className="grid md:grid-cols-2 gap-6">
-          <ul className="list-disc list-inside text-gray-700 space-y-1">
-            <li><strong>Medical Imaging:</strong> MRI, CT, Ultrasound, image processing</li>
-            <li><strong>Biomechanics:</strong> Orthopaedic, Cardiovascular, Tissue engineering</li>
-            <li><strong>Biomedical Instrumentation:</strong> ECG, EEG, EMG, biosensors</li>
-            <li><strong>Tissue Engineering:</strong> Biomaterials, stem cells, regeneration</li>
-          </ul>
-          <ul className="list-disc list-inside text-gray-700 space-y-1">
-            <li><strong>Neural Engineering:</strong> Brain-computer interfaces, neuroprosthetics</li>
-            <li><strong>Signal Processing:</strong> Biosignal analysis and interpretation</li>
-            <li><strong>Clinical Engineering:</strong> Device management, clinical trials</li>
-            <li><strong>Rehabilitation:</strong> Assistive tech, prosthetics, robotics</li>
-          </ul>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {areas.map((area, i) => (
+            <div
+              key={i}
+              className="bg-white rounded-xl shadow p-6 flex flex-col items-start gap-4 hover:shadow-lg hover:scale-105 transition-all duration-300"
+            >
+              <div>{area.icon}</div>
+              <h3 className="text-lg font-bold text-blue-800">
+                {area.title}
+              </h3>
+              <ul className="list-disc pl-5 text-gray-700 text-sm space-y-1">
+                {area.items.map((item, j) => (
+                  <li key={j}>{item}</li>
+                ))}
+              </ul>
+            </div>
+          ))}
         </div>
       </div>
-
-      {/* Interdisciplinary Areas */}
-      <div className="bg-white rounded-lg shadow p-6">
-        <h3 className="text-xl font-semibold text-blue-700 mb-4">Interdisciplinary Areas</h3>
-        <ul className="list-disc list-inside text-gray-700 space-y-1">
-          <li><strong>Embedded Systems:</strong> Electronics, CS, Instrumentation</li>
-          <li><strong>IoT:</strong> Integrating communication, electronics, CS</li>
-          <li><strong>Robotics & Automation:</strong> Electrical, Electronics, CS</li>
-        </ul>
-      </div>
-
-      {/* Other Areas */}
-      <div className="bg-white rounded-lg shadow p-6">
-        <h3 className="text-xl font-semibold text-blue-700 mb-4">Other Areas</h3>
-        <ul className="list-disc list-inside text-gray-700 space-y-1">
-          <li><strong>Soft Computing:</strong> Fuzzy logic, neural networks, genetic algorithms</li>
-          <li><strong>Communication Networks:</strong> Wireless, security, protocols</li>
-          <li><strong>Digital Signal Processing:</strong> Image/audio processing, DSP algorithms</li>
-        </ul>
-      </div>
-
-    </div>
-  </div>
-</section>
-
+    </section>
   );
 };
 

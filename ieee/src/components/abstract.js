@@ -1,40 +1,29 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const Abstract = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    title: '',
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(formData);
+  };
+
   return (
-    <section className="p-10 bg-blue-50">
-      <div className="max-w-xl mx-auto">
-        <h2 className="text-3xl font-bold text-blue-800 mb-6">Submit Your Abstract</h2>
-        <form className="grid gap-4">
-          <input
-            type="text"
-            placeholder="Full Name"
-            className="border p-2 rounded"
-          />
-          <input
-            type="email"
-            placeholder="Email"
-            className="border p-2 rounded"
-          />
-          <input
-            type="text"
-            placeholder="College/Institution"
-            className="border p-2 rounded"
-          />
-          <input
-            type="text"
-            placeholder="Title of Abstract"
-            className="border p-2 rounded"
-          />
-          <button
-            type="submit"
-            className="bg-blue-600 text-white px-4 py-2 rounded"
-          >
-            Submit
-          </button>
-        </form>
-      </div>
-    </section>
+    <form onSubmit={handleSubmit}>
+      <input name="name" value={formData.name} onChange={handleChange} />
+      <input name="email" value={formData.email} onChange={handleChange} />
+      <input name="title" value={formData.title} onChange={handleChange} />
+      <button type="submit">Submit</button>
+    </form>
   );
 };
 

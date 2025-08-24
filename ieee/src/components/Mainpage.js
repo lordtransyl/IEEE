@@ -27,7 +27,7 @@ const Mainpage = () => {
             International Conference on Advanced Technologies and Innovations (ICATI 2026)
           </p>
           <p className="text-gray-600 mb-6 text-base md:text-lg">
-            10 – 11 April 2026<br />
+            8 – 9 May 2026<br />
             NSS College of Engineering, Palakkad, Kerala
           </p>
           
@@ -58,7 +58,7 @@ const Mainpage = () => {
                 <span className="font-semibold">Venue:</span> NSS College of Engineering, Palakkad
               </p>
               <p>
-                <span className="font-semibold">Dates:</span> 10–11 April 2026
+                <span className="font-semibold">Dates:</span> 8–9 May 2026
               </p>
               <p>
                 In Association with <span className="font-semibold">IEEE</span>

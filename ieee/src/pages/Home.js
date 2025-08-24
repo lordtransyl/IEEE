@@ -7,6 +7,7 @@ import Areas from '../components/areas';
 import Team from '../components/team';
 import Footer from '../components/Footer';
 import ContactUs from '../components/contact';
+import Timeline from "../components/Timeline";
 
 const Home = () => {
   return (
@@ -16,6 +17,7 @@ const Home = () => {
       <About />
       <Areas />
       <ImportantDate />
+      <Timeline />
       <Team />
       
       <ContactUs />
